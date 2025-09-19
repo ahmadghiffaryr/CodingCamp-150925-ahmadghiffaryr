@@ -57,11 +57,10 @@ function deleteTodo() {
 
 function completeTodo() {
     try {
-        if (event.target) {
-            const index = event.target.getAttribute('data-index');
-            todos[index].status = "Complete";
-            displayTodos();
-        }
+        // Assuming the index of the todo to complete is passed as an argument
+        const index = event.target.getAttribute('data-index');
+        todos[index].status = "Complete";
+        displayTodos();
     } catch (error) {
         console.error("Error completing todo:", error);
     }
