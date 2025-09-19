@@ -22,6 +22,7 @@
 
     <!-- Content Section -->
     <main>
+        <!-- Input Form: -->
         <form>
             <input type="text" id="todo-input" placeholder="Enter a todo"
                 class="border border-gray-300 rounded p-2 mb-2 w-full">
@@ -32,22 +33,37 @@
         <!-- List of Tasks: -->
         <section class="mt-6">
             <header>
-                <h2 class="text-2xl font-bold">Tasks:</h2>
+                <h2 class="text-2xl font-bold">To-Do:</h2>
             </header>
 
-            <ul class="mt-4" id="todo-list">
-                <li class="border-b border-gray-300 py-2">Sample Task 1 - <span
-                        class="text-sm text-gray-500">2023-10-01</span></li>
-                <li class="border-b border-gray-300 py-2">Sample Task 2 - <span
-                        class="text-sm text-gray-500">2023-10-02</span></li>
-            </ul>
-        </section>
+            <table class="w-full mt-4">
+                <thead>
+                    <tr>
+                        <th class="border p-2">To-Do</th>
+                        <th class="border p-2">Due Date</th>
+                        <th class="border p-2">Status</th>
+                        <th class="border p-2">Actions</th>
+                    </tr>
+                </thead>
 
+                <tbody id="todo-table-body">
+                    <tr>
+                        <td class="border p-2">Sample Task</td>
+                        <td class="border p-2">2023-12-31</td>
+                        <td class="border p-2">Incomplete</td>
+                        <td class="border p-2">
+                            <button class="bg-green-500 text-white px-2 py-1 rounded mr-2">Complete</button>
+                            <button class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Raka Website</p>
+        <p class="text-center mt-6 text-gray-500">&copy; 2025 To-Do List Website</p>
     </footer>
 
     <!-- JS External -->
